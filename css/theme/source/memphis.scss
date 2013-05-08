@@ -36,6 +36,21 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 @import "../template/theme";
 // ---------------------------------------------
 
+/* Slide-specific transition speed overrides */
+.reveal .slides section[data-transition-speed="fast"] {
+	-webkit-transition-duration: 400ms;
+	   -moz-transition-duration: 400ms;
+	    -ms-transition-duration: 400ms;
+	        transition-duration: 400ms;
+}
+.reveal .slides section[data-transition-speed="slow"] {
+	-webkit-transition-duration: 1600ms;
+	   -moz-transition-duration: 1600ms;
+	    -ms-transition-duration: 1600ms;
+	        transition-duration: 1600ms;
+}
+
+
 /*********************************************
  * LAYOUT
  *********************************************/
@@ -51,6 +66,45 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 	max-width: 100%;
 }
 
+p.indent {
+	padding-left: 10%%;
+}
+
+.text-right {
+	text-align: right;
+}
+
+/*********************************************
+ * Module
+ *********************************************/
+
+
+ul.icon-list {
+	margin: 0;
+	padding: 40px 0 0;
+
+	li {
+		list-style: none;
+		vertical-align: top;
+		padding-bottom: 40px;
+	}
+
+	span {
+		display: inline;
+		vertical-align: top;
+		position: relative;
+		top: 18px;
+		left: 20px;
+	}
+
+
+}
+
+.col2 {
+	width: 50%;
+	float: left;
+}
+
 /*********************************************
  * Typography
  *********************************************/
@@ -62,7 +116,7 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #33363b;
+  color: #eb0066;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 0.9em;
   letter-spacing: 0.02em;
@@ -72,10 +126,15 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 	letter-spacing: -.05em;
 
 	span {
+		color: #46474b;
 		text-transform: none;
 		letter-spacing: -0.025em;
 		font-size: .9em;
 		font-weight: 200;
+	}
+
+	&.big {
+		font-size: 8em;
 	}
 
 }
@@ -83,6 +142,11 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 .reveal p {
 	font-weight: 200;
 	margin-bottom: 20px;
+}
+
+.reveal blockquote {
+	width: 100%;
+	box-shadow: none;
 }
 
 /*********************************************
@@ -97,13 +161,25 @@ html.cover body {
 	.reveal .slides {
 		top: 10%;
 	}
+
+	opactiy: 0;
 }
 
 html.fmcg body {
-	background: url('/img/device-friendly-content-completev2.gif') 50% no-repeat;
+	background: url('../../img/device-friendly-content-completev2.gif') 50% no-repeat;
 }
 
 html.weekend body {
-	background: url('/img/Aussie_Mobile_Weekend.jpg') 50% no-repeat;
+	background: url('../../img/Aussie_Mobile_Weekend.jpg') 50% no-repeat;
 	background-size: 100%;
+}
+
+html.mobile-search body {
+	background: url('../../img/mobilegoogle.png') 50% no-repeat;
+	background-size: 80%;
+}
+
+html.otp body {
+	background: url('../../img/banner_otp.jpg') 50% no-repeat;
+	background-size: 60%;
 }
