@@ -16,19 +16,20 @@
 
 // Include theme-specific fonts
 @import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,800);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Questrial);
 
 
 // Override theme settings (see ../template/settings.scss)
-$mainFont: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$mainFont: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $mainColor: #000;
-$headingFont: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$memphisPink: #eb0066;
+$headingFont: "Questrial", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $headingColor: #000;
 $headingTextShadow: none;
 $headingTextTransform: none;
 $backgroundColor: #fff;
-$linkColor: #176F8E;
+$linkColor: $memphisPink;
 $linkColorHover: lighten( $linkColor, 10% );
 $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
@@ -66,13 +67,51 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 	max-width: 100%;
 }
 
-p.indent {
-	padding-left: 10%%;
-}
-
 .text-right {
 	text-align: right;
 }
+
+.reveal ul {
+	
+	padding-top: 40px;
+	margin: 0 0 0 8px;
+
+	li {
+		list-style: none;
+		background: url('../../img/bullet.png') 0 12px no-repeat;
+		padding: 0 0 20px 40px;
+		font-style: italic;
+
+		&.indent {
+
+			padding-left: 10%;
+			background: none;
+		}
+	}
+}
+
+.reveal ol {
+
+	list-style-position: inside;
+	margin: 0;
+	
+
+	li {
+		padding: 0 0 20px 40px;
+		font-style: italic;
+
+		&.feature  {
+			font-weight: 700;
+			font-size: 1.5em;
+			margin-left: 19px;
+			padding-left: 20px;
+			padding-top: 20px;
+			padding-bottom: 40px;
+			color: $memphisPink;
+		}
+	}
+}
+
 
 /*********************************************
  * Module
@@ -87,6 +126,8 @@ ul.icon-list {
 		list-style: none;
 		vertical-align: top;
 		padding-bottom: 40px;
+		padding-left: 0;
+		background: none;
 	}
 
 	span {
@@ -96,14 +137,51 @@ ul.icon-list {
 		top: 18px;
 		left: 20px;
 	}
-
-
 }
 
 .col2 {
 	width: 50%;
 	float: left;
 }
+
+.reveal .quote-details {
+	padding-top: 0.7em;
+	width: 40%;
+	margin: 1.6em auto 0;
+	border-top: 1px solid #000;
+
+	span {
+		display: block;
+	}
+
+	.title {
+		font-size: 1.1em;
+	}
+
+	.description {
+		font-size: 0.6em;
+	}
+}
+
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+
+.reveal .progress {
+	background: rgba(0,0,0,0.2);
+	height: 10px;
+}
+	.reveal .progress span {
+		background: $memphisPink;
+
+		-webkit-transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+		   -moz-transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+		    -ms-transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+		     -o-transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+		        transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+	}
+
 
 /*********************************************
  * Typography
@@ -116,31 +194,62 @@ ul.icon-list {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #eb0066;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $memphisPink;
+  font-family: $headingFont;
   line-height: 0.9em;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-shadow: none;
-  font-weight: 800;
-	letter-spacing: -.05em;
+  letter-spacing: -.05em;
 
 	span {
 		color: #46474b;
 		text-transform: none;
 		letter-spacing: -0.025em;
 		font-size: .9em;
-		font-weight: 200;
+		font-weight: 300;
 	}
 
 	&.big {
 		font-size: 8em;
 	}
 
+	&.statement {
+		font-family: $mainFont;
+		text-transform: none;
+		font-style: italic;
+
+		span {
+			font-weight: 700;
+		}
+	}
+
+	&.quote {
+		font-family: $mainFont;
+		text-transform: none;
+		font-style: italic;
+		line-height: 1.3em;
+
+		span {
+			font-weight: 700;
+			display: inline-block;
+			clear: both;
+			padding-top: 0.4em;
+		}
+	}
+
+}
+
+.reveal h2 {
+
+}
+
+.reveal .slides>section,
+.reveal .slides>section>section {
+	font-weight: 300;
 }
 
 .reveal p {
-	font-weight: 200;
 	margin-bottom: 20px;
 }
 
@@ -156,7 +265,7 @@ ul.icon-list {
 
 html.cover body {
 	background-position:center;
-	background-size: 80%;
+
 
 	.reveal .slides {
 		top: 10%;
@@ -165,21 +274,42 @@ html.cover body {
 	opactiy: 0;
 }
 
-html.fmcg body {
-	background: url('../../img/device-friendly-content-completev2.gif') 50% no-repeat;
-}
+/*********************************************
+ * BACKGROUND STATES
+ *********************************************/
 
-html.weekend body {
-	background: url('../../img/Aussie_Mobile_Weekend.jpg') 50% no-repeat;
+.reveal .state-background {
+	position: absolute;
+	background-repeat: no-repeat;
+
+
+	-webkit-transition: background-image 400ms ease-in-out;
+	   -moz-transition: background-image 400ms ease-in-out;
+	    -ms-transition: background-image 400ms ease-in-out;
+	     -o-transition: background-image 400ms ease-in-out;
+	        transition: background-image 400ms ease-in-out;
 	background-size: 100%;
 }
 
-html.mobile-search body {
-	background: url('../../img/mobilegoogle.png') 50% no-repeat;
-	background-size: 80%;
+
+
+/***  To get the image work, you need a default background image of an transparent png to transform from
+
+	Demo 5 on http://css3.bradshawenterprises.com/cfimg/
+**/
+
+.fmcg .reveal .state-background {
+	// background-image: url('../../img/device-friendly-content-completev2.gif');
 }
 
-html.otp body {
-	background: url('../../img/banner_otp.jpg') 50% no-repeat;
-	background-size: 60%;
+.weekend .reveal .state-background {
+	background-image: url('../../img/Aussie_Mobile_Weekend.jpg');
+}
+
+.mobile-search .reveal .state-background {
+	background-image: url('../../img/mobilegoogle.png');
+}
+
+.otp .reveal .state-background {
+	background-image: url('../../img/banner_otp.jpg');
 }

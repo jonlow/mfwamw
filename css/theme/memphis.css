@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,800);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Questrial);
 /**
  * A simple theme for reveal.js presentations, similar
  * to the default theme. The accent color is darkblue.
@@ -11,20 +11,17 @@
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\000037}}
 body {
   background: white;
   background-color: white; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\0000312}}
 .reveal {
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 36px;
   font-weight: 200;
   letter-spacing: -0.02em;
   color: black; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\0000320}}
 ::selection {
   color: white;
   background: rgba(0, 0, 0, 0.99);
@@ -33,7 +30,6 @@ body {
 /*********************************************
  * HEADERS
  *********************************************/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\0000335}}
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -42,22 +38,20 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: black;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Questrial", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 0.9em;
   letter-spacing: 0.02em;
   text-transform: none;
   text-shadow: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\0000347}}
 .reveal h1 {
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
 /*********************************************
  * LINKS
  *********************************************/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\0000356}}
 .reveal a:not(.image) {
-  color: #176f8e;
+  color: #eb0066;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -65,21 +59,18 @@ body {
   -o-transition: color .15s ease;
   transition: color .15s ease; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\0000366}}
 .reveal a:not(.image):hover {
-  color: #1e91ba;
+  color: #ff1f80;
   text-shadow: none;
   border: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\0000373}}
 .reveal .roll span:after {
   color: #fff;
-  background: #0c3c4c; }
+  background: #9f0045; }
 
 /*********************************************
  * IMAGES
  *********************************************/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\0000383}}
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
@@ -91,61 +82,50 @@ body {
   -o-transition: all .2s linear;
   transition: all .2s linear; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\0000397}}
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #176f8e;
+  border-color: #eb0066;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\00003110}}
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #176f8e; }
+  border-right-color: #eb0066; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\00003115}}
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #176f8e; }
+  border-left-color: #eb0066; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\00003120}}
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #176f8e; }
+  border-bottom-color: #eb0066; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\00003125}}
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #176f8e; }
+  border-top-color: #eb0066; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\00003129}}
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #1e91ba; }
+  border-right-color: #ff1f80; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\00003133}}
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #1e91ba; }
+  border-left-color: #ff1f80; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\00003137}}
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #1e91ba; }
+  border-bottom-color: #ff1f80; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\00003141}}
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #1e91ba; }
+  border-top-color: #ff1f80; }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\00003150}}
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/template\/theme\.scss}line{font-family:\00003153}}
 .reveal .progress span {
-  background: #176f8e;
+  background: #eb0066;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -153,14 +133,12 @@ body {
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
 /* Slide-specific transition speed overrides */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\0000340}}
 .reveal .slides section[data-transition-speed="fast"] {
   -webkit-transition-duration: 400ms;
   -moz-transition-duration: 400ms;
   -ms-transition-duration: 400ms;
   transition-duration: 400ms; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\0000346}}
 .reveal .slides section[data-transition-speed="slow"] {
   -webkit-transition-duration: 1600ms;
   -moz-transition-duration: 1600ms;
@@ -170,38 +148,57 @@ body {
 /*********************************************
  * LAYOUT
  *********************************************/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\0000358}}
 .reveal .headline {
   text-align: left; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\0000362}}
 .reveal section img {
   border: 0;
   margin: 0;
   box-shadow: none;
   max-width: 100%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\0000369}}
-p.indent {
-  padding-left: 10%%; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\0000373}}
 .text-right {
   text-align: right; }
+
+.reveal ul {
+  padding-top: 40px;
+  margin: 0 0 0 8px; }
+  .reveal ul li {
+    list-style: none;
+    background: url("../../img/bullet.png") 0 12px no-repeat;
+    padding: 0 0 20px 40px;
+    font-style: italic; }
+    .reveal ul li.indent {
+      padding-left: 10%;
+      background: none; }
+
+.reveal ol {
+  list-style-position: inside;
+  margin: 0; }
+  .reveal ol li {
+    padding: 0 0 20px 40px;
+    font-style: italic; }
+    .reveal ol li.feature {
+      font-weight: 700;
+      font-size: 1.5em;
+      margin-left: 19px;
+      padding-left: 20px;
+      padding-top: 20px;
+      padding-bottom: 40px;
+      color: #eb0066; }
 
 /*********************************************
  * Module
  *********************************************/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\0000382}}
 ul.icon-list {
   margin: 0;
   padding: 40px 0 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\0000386}}
   ul.icon-list li {
     list-style: none;
     vertical-align: top;
-    padding-bottom: 40px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\0000392}}
+    padding-bottom: 40px;
+    padding-left: 0;
+    background: none; }
   ul.icon-list span {
     display: inline;
     vertical-align: top;
@@ -209,16 +206,41 @@ ul.icon-list {
     top: 18px;
     left: 20px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\00003103}}
 .col2 {
   width: 50%;
   float: left; }
+
+.reveal .quote-details {
+  padding-top: 0.7em;
+  width: 40%;
+  margin: 1.6em auto 0;
+  border-top: 1px solid #000; }
+  .reveal .quote-details span {
+    display: block; }
+  .reveal .quote-details .title {
+    font-size: 1.1em; }
+  .reveal .quote-details .description {
+    font-size: 0.6em; }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  height: 10px; }
+
+.reveal .progress span {
+  background: #eb0066;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
 /*********************************************
  * Typography
  *********************************************/
 /* line 35, ../../reveal.js/css/theme/template/theme.scss */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\00003117}}
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -227,14 +249,12 @@ ul.icon-list {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #eb0066;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Questrial", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 0.9em;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-shadow: none;
-  font-weight: 800;
   letter-spacing: -0.05em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\00003128}}
   .reveal h1 span,
   .reveal h2 span,
   .reveal h3 span,
@@ -245,8 +265,7 @@ ul.icon-list {
     text-transform: none;
     letter-spacing: -0.025em;
     font-size: .9em;
-    font-weight: 200; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\00003136}}
+    font-weight: 300; }
   .reveal h1.big,
   .reveal h2.big,
   .reveal h3.big,
@@ -254,13 +273,50 @@ ul.icon-list {
   .reveal h5.big,
   .reveal h6.big {
     font-size: 8em; }
+  .reveal h1.statement,
+  .reveal h2.statement,
+  .reveal h3.statement,
+  .reveal h4.statement,
+  .reveal h5.statement,
+  .reveal h6.statement {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: none;
+    font-style: italic; }
+    .reveal h1.statement span,
+    .reveal h2.statement span,
+    .reveal h3.statement span,
+    .reveal h4.statement span,
+    .reveal h5.statement span,
+    .reveal h6.statement span {
+      font-weight: 700; }
+  .reveal h1.quote,
+  .reveal h2.quote,
+  .reveal h3.quote,
+  .reveal h4.quote,
+  .reveal h5.quote,
+  .reveal h6.quote {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: none;
+    font-style: italic;
+    line-height: 1.3em; }
+    .reveal h1.quote span,
+    .reveal h2.quote span,
+    .reveal h3.quote span,
+    .reveal h4.quote span,
+    .reveal h5.quote span,
+    .reveal h6.quote span {
+      font-weight: 700;
+      display: inline-block;
+      clear: both;
+      padding-top: 0.4em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\00003142}}
+.reveal .slides > section,
+.reveal .slides > section > section {
+  font-weight: 300; }
+
 .reveal p {
-  font-weight: 200;
   margin-bottom: 20px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\00003147}}
 .reveal blockquote {
   width: 100%;
   box-shadow: none; }
@@ -268,30 +324,34 @@ ul.icon-list {
 /*********************************************
  * Background Covers
  *********************************************/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\00003157}}
 html.cover body {
   background-position: center;
-  background-size: 80%;
   opactiy: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\00003161}}
   html.cover body .reveal .slides {
     top: 10%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\00003168}}
-html.fmcg body {
-  background: url("../../img/device-friendly-content-completev2.gif") 50% no-repeat; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\00003172}}
-html.weekend body {
-  background: url("../../img/Aussie_Mobile_Weekend.jpg") 50% no-repeat;
+/*********************************************
+ * BACKGROUND STATES
+ *********************************************/
+.reveal .state-background {
+  position: absolute;
+  background-repeat: no-repeat;
+  -webkit-transition: background-image 400ms ease-in-out;
+  -moz-transition: background-image 400ms ease-in-out;
+  -ms-transition: background-image 400ms ease-in-out;
+  -o-transition: background-image 400ms ease-in-out;
+  transition: background-image 400ms ease-in-out;
   background-size: 100%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\00003177}}
-html.mobile-search body {
-  background: url("../../img/mobilegoogle.png") 50% no-repeat;
-  background-size: 80%; }
+/***  To get the image work, you need a default background image of an transparent png to transform from
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/WebServer\/playground\/presentations\/mfwamw\/css\/theme\/source\/memphis\.scss}line{font-family:\00003182}}
-html.otp body {
-  background: url("../../img/banner_otp.jpg") 50% no-repeat;
-  background-size: 60%; }
+	Demo 5 on http://css3.bradshawenterprises.com/cfimg/
+**/
+.weekend .reveal .state-background {
+  background-image: url("../../img/Aussie_Mobile_Weekend.jpg"); }
+
+.mobile-search .reveal .state-background {
+  background-image: url("../../img/mobilegoogle.png"); }
+
+.otp .reveal .state-background {
+  background-image: url("../../img/banner_otp.jpg"); }
