@@ -173,8 +173,7 @@ body {
       background: none; }
 
 .reveal ol {
-  list-style-position: inside;
-  margin: 0; }
+  margin: 0 0 0 50px; }
   .reveal ol li {
     padding: 0 0 20px 40px;
     font-style: italic; }
@@ -241,6 +240,9 @@ ul.icon-list {
  * Typography
  *********************************************/
 /* line 35, ../../reveal.js/css/theme/template/theme.scss */
+.reveal {
+  font-size: 2.3em; }
+
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -252,9 +254,10 @@ ul.icon-list {
   font-family: "Questrial", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 0.9em;
   letter-spacing: 0.02em;
-  text-transform: uppercase;
-  text-shadow: none;
-  letter-spacing: -0.05em; }
+  letter-spacing: -0.05em;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
+  font-style: italic; }
   .reveal h1 span,
   .reveal h2 span,
   .reveal h3 span,
@@ -265,7 +268,11 @@ ul.icon-list {
     text-transform: none;
     letter-spacing: -0.025em;
     font-size: .9em;
-    font-weight: 300; }
+    font-weight: 300;
+    font-weight: 700;
+    display: inline-block;
+    clear: both;
+    padding-top: 0.4em; }
   .reveal h1.big,
   .reveal h2.big,
   .reveal h3.big,
