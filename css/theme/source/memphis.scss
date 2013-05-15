@@ -65,10 +65,15 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 	margin: 0;
 	box-shadow: none;
 	max-width: 100%;
+	max-height: 100%;
 }
 
 .text-right {
 	text-align: right;
+}
+
+.reveal .slides>section, .reveal .slides>section>section {
+	padding: 0;
 }
 
 .reveal ul {
@@ -154,7 +159,7 @@ ul.icon-list {
 	}
 
 	.title {
-		font-size: 1.1em;
+		font-size: 0.8em;
 	}
 
 	.description {
@@ -162,6 +167,10 @@ ul.icon-list {
 	}
 }
 
+.reveal img.fixed {
+	position: absolute;
+	left: 50px;
+}
 
 /*********************************************
  * PROGRESS BAR
@@ -191,6 +200,10 @@ ul.icon-list {
 	font-size: 2.3em;
 }
 
+.reveal h1 {
+	font-size: 3.3em;
+}
+
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -200,10 +213,9 @@ ul.icon-list {
   margin: 0 0 20px 0;
   color: $memphisPink;
   font-family: $headingFont;
-  line-height: 0.9em;
+  line-height: 1em;
   letter-spacing: 0.02em;
-  // text-transform: uppercase;
-  // text-shadow: none;
+  text-shadow: none;
   letter-spacing: -.05em;
 
   font-family: $mainFont;
@@ -218,8 +230,7 @@ ul.icon-list {
 		font-weight: 300;
 
 		font-weight: 700;
-			display: inline-block;
-			clear: both;
+
 			padding-top: 0.4em;
 	}
 
@@ -245,9 +256,13 @@ ul.icon-list {
 
 		span {
 			font-weight: 700;
-			display: inline-block;
 			clear: both;
 			padding-top: 0.4em;
+
+			&.big {
+				color: $mainColor;
+				font-size: 1.8em;
+			}
 		}
 	}
 
@@ -271,6 +286,13 @@ ul.icon-list {
 	box-shadow: none;
 }
 
+.reveal .roll {
+	-webkit-perspective: none;
+	-moz-perspective: none;
+	-ms-perspective: none;
+	perspective: none;
+}
+
 /*********************************************
  * Background Covers
  *********************************************/
@@ -278,6 +300,8 @@ ul.icon-list {
 
 html.cover body {
 	background-position:center;
+	background-size: cover;
+	background-repeat: no-repeat;
 
 
 	.reveal .slides {
@@ -287,42 +311,106 @@ html.cover body {
 	opactiy: 0;
 }
 
+.pope .reveal .state-background {
+	background: url('../../img/pope.jpg') no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+}
+
+.responsive .reveal .state-background {
+	background: url('../../img/Screens.png') no-repeat 90% 70%;
+	background-size: 30%;
+}
+
 /*********************************************
- * BACKGROUND STATES
+ * Themes
  *********************************************/
 
-.reveal .state-background {
-	position: absolute;
-	background-repeat: no-repeat;
+.pink {
 
+	.reveal .state-background {
+		background: $memphisPink;
+		color: #fff;
+	}
 
-	-webkit-transition: background-image 400ms ease-in-out;
-	   -moz-transition: background-image 400ms ease-in-out;
-	    -ms-transition: background-image 400ms ease-in-out;
-	     -o-transition: background-image 400ms ease-in-out;
-	        transition: background-image 400ms ease-in-out;
-	background-size: 100%;
+	.reveal h1,
+	.reveal h2,
+	.reveal h3,
+	.reveal h4,
+	.reveal h5,
+	.reveal h6 {
+		color: #fff;
+
+		span {
+			color: lighten($memphisPink,50%);
+		}
+	}
+
+	.reveal .quote-details {
+		border-top: 1px solid #fff;
+		span {
+			color: #fff;
+		}
+	}
+
 }
 
+.purple {
 
+	.reveal .state-background {
+		background: #352f8e;
+		color: #fff;
+	}
 
-/***  To get the image work, you need a default background image of an transparent png to transform from
+	.reveal h1,
+	.reveal h2,
+	.reveal h3,
+	.reveal h4,
+	.reveal h5,
+	.reveal h6 {
+		color: #fff;
 
-	Demo 5 on http://css3.bradshawenterprises.com/cfimg/
-**/
+		span {
+			color: lighten(#11cfe0,40%);
+		}
+	}
 
-.fmcg .reveal .state-background {
-	// background-image: url('../../img/device-friendly-content-completev2.gif');
+	.reveal .quote-details {
+		border-top: 1px solid #fff;
+		span {
+			color: #fff;
+		}
+	}
+
 }
 
-.weekend .reveal .state-background {
-	background-image: url('../../img/Aussie_Mobile_Weekend.jpg');
-}
+.aqua {
 
-.mobile-search .reveal .state-background {
-	background-image: url('../../img/mobilegoogle.png');
-}
+	.reveal .state-background {
+		background: #00b2c2;
+		color: #fff;
+	}
 
-.otp .reveal .state-background {
-	background-image: url('../../img/banner_otp.jpg');
+	.reveal h1,
+	.reveal h2,
+	.reveal h3,
+	.reveal h4,
+	.reveal h5,
+	.reveal h6 {
+		color: #fff;
+
+		span {
+			color: lighten(#352f8e,0%);
+		}
+	}
+
+	.reveal .quote-details {
+		border-top: 1px solid #fff;
+		span {
+			color: #fff;
+		}
+	}
+
 }

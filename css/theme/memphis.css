@@ -155,10 +155,14 @@ body {
   border: 0;
   margin: 0;
   box-shadow: none;
-  max-width: 100%; }
+  max-width: 100%;
+  max-height: 100%; }
 
 .text-right {
   text-align: right; }
+
+.reveal .slides > section, .reveal .slides > section > section {
+  padding: 0; }
 
 .reveal ul {
   padding-top: 40px;
@@ -217,9 +221,13 @@ ul.icon-list {
   .reveal .quote-details span {
     display: block; }
   .reveal .quote-details .title {
-    font-size: 1.1em; }
+    font-size: 0.8em; }
   .reveal .quote-details .description {
     font-size: 0.6em; }
+
+.reveal img.fixed {
+  position: absolute;
+  left: 50px; }
 
 /*********************************************
  * PROGRESS BAR
@@ -243,6 +251,9 @@ ul.icon-list {
 .reveal {
   font-size: 2.3em; }
 
+.reveal h1 {
+  font-size: 3.3em; }
+
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -252,8 +263,9 @@ ul.icon-list {
   margin: 0 0 20px 0;
   color: #eb0066;
   font-family: "Questrial", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 0.9em;
+  line-height: 1em;
   letter-spacing: 0.02em;
+  text-shadow: none;
   letter-spacing: -0.05em;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: none;
@@ -270,8 +282,6 @@ ul.icon-list {
     font-size: .9em;
     font-weight: 300;
     font-weight: 700;
-    display: inline-block;
-    clear: both;
     padding-top: 0.4em; }
   .reveal h1.big,
   .reveal h2.big,
@@ -313,9 +323,16 @@ ul.icon-list {
     .reveal h5.quote span,
     .reveal h6.quote span {
       font-weight: 700;
-      display: inline-block;
       clear: both;
       padding-top: 0.4em; }
+      .reveal h1.quote span.big,
+      .reveal h2.quote span.big,
+      .reveal h3.quote span.big,
+      .reveal h4.quote span.big,
+      .reveal h5.quote span.big,
+      .reveal h6.quote span.big {
+        color: black;
+        font-size: 1.8em; }
 
 .reveal .slides > section,
 .reveal .slides > section > section {
@@ -328,37 +345,99 @@ ul.icon-list {
   width: 100%;
   box-shadow: none; }
 
+.reveal .roll {
+  -webkit-perspective: none;
+  -moz-perspective: none;
+  -ms-perspective: none;
+  perspective: none; }
+
 /*********************************************
  * Background Covers
  *********************************************/
 html.cover body {
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   opactiy: 0; }
   html.cover body .reveal .slides {
     top: 10%; }
 
+.pope .reveal .state-background {
+  background: url("../../img/pope.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.responsive .reveal .state-background {
+  background: url("../../img/Screens.png") no-repeat 90% 70%;
+  background-size: 30%; }
+
 /*********************************************
- * BACKGROUND STATES
+ * Themes
  *********************************************/
-.reveal .state-background {
-  position: absolute;
-  background-repeat: no-repeat;
-  -webkit-transition: background-image 400ms ease-in-out;
-  -moz-transition: background-image 400ms ease-in-out;
-  -ms-transition: background-image 400ms ease-in-out;
-  -o-transition: background-image 400ms ease-in-out;
-  transition: background-image 400ms ease-in-out;
-  background-size: 100%; }
+.pink .reveal .state-background {
+  background: #eb0066;
+  color: #fff; }
+.pink .reveal h1,
+.pink .reveal h2,
+.pink .reveal h3,
+.pink .reveal h4,
+.pink .reveal h5,
+.pink .reveal h6 {
+  color: #fff; }
+  .pink .reveal h1 span,
+  .pink .reveal h2 span,
+  .pink .reveal h3 span,
+  .pink .reveal h4 span,
+  .pink .reveal h5 span,
+  .pink .reveal h6 span {
+    color: #ffebf4; }
+.pink .reveal .quote-details {
+  border-top: 1px solid #fff; }
+  .pink .reveal .quote-details span {
+    color: #fff; }
 
-/***  To get the image work, you need a default background image of an transparent png to transform from
+.purple .reveal .state-background {
+  background: #352f8e;
+  color: #fff; }
+.purple .reveal h1,
+.purple .reveal h2,
+.purple .reveal h3,
+.purple .reveal h4,
+.purple .reveal h5,
+.purple .reveal h6 {
+  color: #fff; }
+  .purple .reveal h1 span,
+  .purple .reveal h2 span,
+  .purple .reveal h3 span,
+  .purple .reveal h4 span,
+  .purple .reveal h5 span,
+  .purple .reveal h6 span {
+    color: #c3f6fa; }
+.purple .reveal .quote-details {
+  border-top: 1px solid #fff; }
+  .purple .reveal .quote-details span {
+    color: #fff; }
 
-	Demo 5 on http://css3.bradshawenterprises.com/cfimg/
-**/
-.weekend .reveal .state-background {
-  background-image: url("../../img/Aussie_Mobile_Weekend.jpg"); }
-
-.mobile-search .reveal .state-background {
-  background-image: url("../../img/mobilegoogle.png"); }
-
-.otp .reveal .state-background {
-  background-image: url("../../img/banner_otp.jpg"); }
+.aqua .reveal .state-background {
+  background: #00b2c2;
+  color: #fff; }
+.aqua .reveal h1,
+.aqua .reveal h2,
+.aqua .reveal h3,
+.aqua .reveal h4,
+.aqua .reveal h5,
+.aqua .reveal h6 {
+  color: #fff; }
+  .aqua .reveal h1 span,
+  .aqua .reveal h2 span,
+  .aqua .reveal h3 span,
+  .aqua .reveal h4 span,
+  .aqua .reveal h5 span,
+  .aqua .reveal h6 span {
+    color: #352f8e; }
+.aqua .reveal .quote-details {
+  border-top: 1px solid #fff; }
+  .aqua .reveal .quote-details span {
+    color: #fff; }
