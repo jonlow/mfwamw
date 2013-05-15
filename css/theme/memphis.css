@@ -227,14 +227,19 @@ ul.icon-list {
 
 .reveal img.fixed {
   position: absolute;
-  left: 50px; }
+  left: 30px; }
+
+.reveal .controls {
+  transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -webkit-transform: scale(0.7); }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
-  height: 10px; }
+  height: 5px; }
 
 .reveal .progress span {
   background: #eb0066;
@@ -333,6 +338,14 @@ ul.icon-list {
       .reveal h6.quote span.big {
         color: black;
         font-size: 1.8em; }
+  .reveal h1.right,
+  .reveal h2.right,
+  .reveal h3.right,
+  .reveal h4.right,
+  .reveal h5.right,
+  .reveal h6.right {
+    padding-left: 50%;
+    text-align: left; }
 
 .reveal .slides > section,
 .reveal .slides > section > section {
@@ -340,6 +353,10 @@ ul.icon-list {
 
 .reveal p {
   margin-bottom: 20px; }
+  .reveal p.small {
+    color: black;
+    font-size: 0.8em;
+    font-style: normal; }
 
 .reveal blockquote {
   width: 100%;
@@ -372,6 +389,18 @@ html.cover body {
 .responsive .reveal .state-background {
   background: url("../../img/Screens.png") no-repeat 90% 70%;
   background-size: 30%; }
+
+.tiffany .reveal .state-background {
+  background: url("../../img/tiffany.png") no-repeat 10% 50%;
+  background-size: 40%; }
+
+.devicecount .reveal .state-background {
+  background: url("../../img/iosandroid.jpg") no-repeat 10% 50%;
+  background-size: 40%; }
+
+.baby .reveal .state-background {
+  background: url("../../img/baby.jpg") no-repeat 10% 50%;
+  background-size: 40%; }
 
 /*********************************************
  * Themes
@@ -440,4 +469,26 @@ html.cover body {
 .aqua .reveal .quote-details {
   border-top: 1px solid #fff; }
   .aqua .reveal .quote-details span {
+    color: #fff; }
+
+.dark .reveal .state-background {
+  background: #282828;
+  color: #fff; }
+.dark .reveal h1,
+.dark .reveal h2,
+.dark .reveal h3,
+.dark .reveal h4,
+.dark .reveal h5,
+.dark .reveal h6 {
+  color: #fff; }
+  .dark .reveal h1 span,
+  .dark .reveal h2 span,
+  .dark .reveal h3 span,
+  .dark .reveal h4 span,
+  .dark .reveal h5 span,
+  .dark .reveal h6 span {
+    color: #352f8e; }
+.dark .reveal .quote-details {
+  border-top: 1px solid #fff; }
+  .dark .reveal .quote-details span {
     color: #fff; }

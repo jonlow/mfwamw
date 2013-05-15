@@ -169,7 +169,13 @@ ul.icon-list {
 
 .reveal img.fixed {
 	position: absolute;
-	left: 50px;
+	left: 30px;
+}
+
+.reveal .controls {
+	transform: scale(0.7);
+	-ms-transform: scale(0.7);
+	-webkit-transform: scale(0.7);
 }
 
 /*********************************************
@@ -178,7 +184,7 @@ ul.icon-list {
 
 .reveal .progress {
 	background: rgba(0,0,0,0.2);
-	height: 10px;
+	height: 5px;
 }
 	.reveal .progress span {
 		background: $memphisPink;
@@ -266,6 +272,11 @@ ul.icon-list {
 		}
 	}
 
+	&.right {
+		padding-left: 50%;
+		text-align: left;
+	}
+
 }
 
 .reveal h2 {
@@ -279,6 +290,12 @@ ul.icon-list {
 
 .reveal p {
 	margin-bottom: 20px;
+
+	&.small {
+		color: $mainColor;
+		font-size: 0.8em;
+		font-style: normal;
+	}
 }
 
 .reveal blockquote {
@@ -323,6 +340,22 @@ html.cover body {
 	background: url('../../img/Screens.png') no-repeat 90% 70%;
 	background-size: 30%;
 }
+
+.tiffany .reveal .state-background {
+	background: url('../../img/tiffany.png') no-repeat 10% 50%;
+	background-size: 40%;
+}
+
+.devicecount .reveal .state-background {
+	background: url('../../img/iosandroid.jpg') no-repeat 10% 50%;
+	background-size: 40%;
+}
+
+.baby .reveal .state-background {
+	background: url('../../img/baby.jpg') no-repeat 10% 50%;
+	background-size: 40%;
+}
+
 
 /*********************************************
  * Themes
@@ -390,6 +423,35 @@ html.cover body {
 
 	.reveal .state-background {
 		background: #00b2c2;
+		color: #fff;
+	}
+
+	.reveal h1,
+	.reveal h2,
+	.reveal h3,
+	.reveal h4,
+	.reveal h5,
+	.reveal h6 {
+		color: #fff;
+
+		span {
+			color: lighten(#352f8e,0%);
+		}
+	}
+
+	.reveal .quote-details {
+		border-top: 1px solid #fff;
+		span {
+			color: #fff;
+		}
+	}
+
+}
+
+.dark {
+
+	.reveal .state-background {
+		background: #282828;
 		color: #fff;
 	}
 
