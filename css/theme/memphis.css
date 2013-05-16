@@ -229,6 +229,9 @@ ul.icon-list {
   position: absolute;
   left: 30px; }
 
+.iphone .reveal img.fixed {
+  left: 126px; }
+
 .reveal .controls {
   transform: scale(0.7);
   -ms-transform: scale(0.7);
